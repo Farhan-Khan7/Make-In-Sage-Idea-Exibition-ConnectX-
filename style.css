@@ -1,9 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     height: 100%;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
@@ -21,21 +23,24 @@ html,body{
     position: fixed;
     width: 100%;
     height: 70px;
+    /* background-color: #DAC8FF/; */
     top: 0;
-    z-index: 10;
+    z-index: 10000;
 }
 
 .logo-name p {
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: 1.7rem;
+    font-weight: 500;
     display: flex;
     align-items: center;
 }
 
-.logo-name span {
-    color: #9BE784;
+.logo-name span img {
+    color: #FFB7AD;
+    height: 25px;
+    width: fit-content;
     font-size: 2.8rem;
-    font-weight: 400;
+    font-weight: 600;
     animation: bobble 2s ease-in-out infinite;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -53,6 +58,7 @@ html,body{
 }
 
 .nav-tabs a {
+    /* color: #FFB7AD; */
     color: #000;
     text-decoration: none;
     margin-left: 1.5rem;
@@ -61,8 +67,10 @@ html,body{
 
     transition: color 0.3s ease;
 }
-.login-signup a{
-    color: #000;
+
+.login-signup a {
+    /* color: #FFB7AD; */
+    color: black;
     text-decoration: none;
     margin-left: 1.5rem;
     font-weight: 500;
@@ -71,46 +79,882 @@ html,body{
 
 }
 
-.nav-tabs a.active {
+/* .nav-tabs a.active {
     /* color: var(--primary-color); */
-    color: #ffd60a;
-}
+/* color: #9BE784; */
+/* } */
 
 .nav-tabs a:hover {
     /* color: var(--primary-color); */
-    color: #ffd60a;
+    color: #9BE784;
+}
+
+.login-signup a:hover {
+    /* color: var(--primary-color); */
+    color: #9BE784;
 }
 
 .nav-tabs a:active {
-    color: #ffd60a;
+    color: #FFB7AD;
 }
 
 .hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white; /* white background */
-  overflow: hidden;
-  z-index: 0; /* base layer */
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    /* white background */
+    overflow: hidden;
+    z-index: 0;
+    /* base layer */
 }
 
 /* scrolling grid background */
 .hero::before {
-  content: "";
-  position: absolute; /* scrolls with the page */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    linear-gradient(#cccccc54 1px, transparent 1px),
-    linear-gradient(90deg, #cccccc56 1px, transparent 1px);
-  background-size: 40px 40px;
-  z-index: 0; /* behind content */
-  pointer-events: none; /* clicks pass through */
+    content: "";
+    position: absolute;
+    /* scrolls with the page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image:
+        linear-gradient(#cccccc2a 1px, transparent 1px),
+        linear-gradient(90deg, #cccccc2a 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+    /* behind content */
+    pointer-events: none;
+    /* clicks pass through */
 }
 
 
 /* content above background */
+
+#home-main {
+    width: 100%;
+    height: 100%;
+}
+
+#hero-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: #9BE784; */
+    height: 100vh;
+    padding: 5rem;
+    width: 100%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ffd60a; */
+    font-size: 75vh;
+    color: #FFB7AD;
+    font-weight: 700;
+    height: 400px;
+    width: 400px;
+    animation: hero-section 1.9s ease-in-out infinite;
+
+}
+
+@keyframes hero-section {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero-right img {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.hero-left-upper-part h1 {
+    font-weight: lighter;
+    font-size: 2.3rem;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+.hero-left-upper-part p {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#changing-text {
+    display: inline-block;
+    font-size: 1.9rem;
+    color: #F73F86;
+    opacity: 0;
+    animation: slideUpFade 1s ease forwards;
+}
+
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+/* Hero Button */
+#herosection-btn {
+    /* background-color: var(--primary-color); */
+    background-color: #F73F86;
+    /* border: 2px solid #000; */
+    border: none;
+    color: #000;
+    /* border: none; */
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#herosection-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px rgba(255, 214, 10, 0.6);
+}
+
+/* hero section done  */
+
+/* 2. Layout Helpers */
+/* Page container to add overall padding */
+.page-container {
+    /* background-color: #0050c7; */
+    max-width: 84rem;
+    /* 1024px */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+    /* Mobile padding */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    /* 16px */
+    padding-right: 1rem;
+    /* 16px */
+    /* UPDATED: Reduced vertical padding to make cards shorter */
+    padding-top: 1rem;
+    /* 1.25rem se kam kar diya */
+    padding-bottom: 1rem;
+    /* 1.25rem se kam kar diya */
+}
+
+/* Base card style */
+.card {
+    background-color: #3175d4;
+    /* background-color: #000; */
+    z-index: 1000;
+    border-radius: 1rem;
+    /* 16px */
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+    /* 12px */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.layout-container {
+    /* Mobile-first: default is column */
+    /* UPDATED: Reduced padding */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    /* 1rem se kam kar diya */
+}
+
+.text-content {
+    /* background-color: #111827; */
+    width: 100%;
+    /* UPDATED: Reduced padding */
+    padding: 2rem;
+    /* background-color: #000; */
+    /* 1rem se kam kar diya */
+}
+#image-directory{
+    /* background-color: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000; */
+    height: 25rem;
+    width: 45%;
+    background-image: url(assests/Alumni\ Network.png);
+    background-size: 30rem ;
+    background-position: center;
+    /* background-size: cover; */
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+#image-events{
+    /* background-color: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000; */
+    height: 25rem;
+    width: 45%;
+    background-image: url(assests/Event.png);
+    background-size: 30rem ;
+    background-position: center;
+    /* background-size: cover; */
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+#image-jobs{
+    /* background-color: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000; */
+    height: 25rem;
+    width: 75%;
+    background-image: url(assests/Job\ Image.png);
+    background-size: 30rem ;
+    background-position: center;
+    /* background-size: cover; */
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+#image-mentorship{
+    /* background-color: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000; */
+    height: 25rem;
+    width: 65%;
+    background-image: url(assests/mentorship.png);
+    background-size: 30rem ;
+    background-position: center;
+    /* background-size: cover; */
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+#image-contribute{
+    /* background-color: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000; */
+    height: 25rem;
+    width: 55%;
+    background-image: url(assests/fundrasing.png);
+    background-size: 30rem ;
+    background-position: center;
+    /* background-size: cover; */
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+#image-stories{
+    /* background-color: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000; */
+    height: 25rem;
+    width: 65%;
+    background-image: url(assests/alumni\ stories.png);
+    background-size: 30rem ;
+    background-position: center;
+    /* background-size: cover; */
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+.image-content {
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(assests/Alumni\ Network.png); */
+    /* UPDATED: Reduced padding */
+    padding: 0.75rem;
+    /* 1rem se kam kar diya */
+}
+
+#image-directory img {
+    object-fit: cover;
+    width: 100%;
+    height: 640px;
+    object-fit: contain;
+    background-color: #000;
+    /* Fit image without stretching */
+    border-radius: 0.75rem;
+    /* 12px */
+}
+
+/* 3. Typography */
+.section-label {
+    margin: 1.5rem 1.5rem;
+    font-size: 1rem;
+    /* 16px */
+    font-weight: 800;
+    display: block;
+}
+
+.section-heading {
+    margin: 0 1.5rem;
+    margin-top: .9rem;
+    font-size: 1.75rem;
+    /* 28px */
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: #111827;
+}
+
+.section-description {
+    margin: 0 1.5rem;
+    margin-top: 0.75rem;
+    /* 12px */
+    font-size: 0.875rem;
+    /* 14px */
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.highlights-heading {
+    margin: 0 1.5rem;
+    margin-top: 1.25rem;
+    /* 20px */
+    font-size: 0.875rem;
+    /* 14px */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #6b7280;
+}
+
+/* 4. Feature List */
+.highlights-list {
+    margin: 0 1.5rem;
+    margin-top: 0.75rem;
+    /* 12px */
+    padding: 0;
+    list-style: none;
+}
+
+.highlights-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    /* 12px */
+    margin-top: 0.5rem;
+    /* 8px */
+}
+
+.highlights-list li:first-child {
+    margin-top: 0;
+}
+
+.highlights-list svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+}
+
+.highlights-list span {
+    font-size: 0.875rem;
+    /* 14px */
+    color: #4b5563;
+}
+
+/* 5. Base Button */
+.button-wrapper {
+    margin-top: 1.5rem;
+    /* 24px */
+}
+
+.btn {
+    margin: 0 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent;
+    /* Base border */
+}
+
+/* 6. --- UNIQUE CARD & BUTTON STYLES --- */
+
+/* CARD 1: ALUMNI DIRECTORY (Blue) 🟦 */
+.card-directory {
+    background-color: #f0f4ff;
+}
+
+.card-directory .section-label {
+    color: #4f46e5;
+}
+
+.card-directory .highlights-list svg {
+    color: #4f46e5;
+}
+
+.btn-directory {
+    background-image: linear-gradient(to right, #4f46e5, #4338ca);
+    color: #ffffff;
+    border-radius: 0.75rem;
+    /* 12px */
+    border: none;
+    padding: calc(0.75rem + 2px) calc(1.5rem + 2px);
+    /* +2px to account for no border */
+    box-shadow: 0 4px 10px rgb(79 70 229 / 0.2);
+    transform: translateY(0);
+}
+
+.btn-directory:hover {
+    background-image: linear-gradient(to right, #4338ca, #4f46e5);
+    box-shadow: 0 6px 15px rgb(79 70 229 / 0.3);
+    transform: translateY(-2px);
+}
+
+/* CARD 2: EVENTS & REUNIONS (Purple) 🟪 */
+.card-events {
+    background-color: #f8f5ff;
+}
+
+.card-events .section-label {
+    color: #7e22ce;
+}
+
+.card-events .highlights-list svg {
+    color: #7e22ce;
+}
+
+.btn-events {
+    background-image: linear-gradient(to right, #7e22ce, #6b21a8);
+    color: #ffffff;
+    border-radius: 0.75rem;
+    /* 12px */
+    border: none;
+    padding: calc(0.75rem + 2px) calc(1.5rem + 2px);
+    box-shadow: 0 4px 10px rgb(126 34 206 / 0.2);
+    transform: translateY(0);
+}
+
+.btn-events:hover {
+    background-image: linear-gradient(to right, #6b21a8, #7e22ce);
+    box-shadow: 0 6px 15px rgb(126 34 206 / 0.3);
+    transform: translateY(-2px);
+}
+
+/* CARD 3: JOB BOARD (Orange) 🟧 */
+.card-jobs {
+    background-color: #fffaf5;
+}
+
+.card-jobs .section-label {
+    color: #f97316;
+}
+
+.card-jobs .highlights-list svg {
+    color: #f97316;
+}
+
+.btn-jobs {
+    background-image: linear-gradient(to right, #f97316, #ea580c);
+    color: #ffffff;
+    border-radius: 0.75rem;
+    /* 12px */
+    border: none;
+    padding: calc(0.75rem + 2px) calc(1.5rem + 2px);
+    box-shadow: 0 4px 10px rgb(249 115 22 / 0.2);
+    transform: translateY(0);
+}
+
+.btn-jobs:hover {
+    background-image: linear-gradient(to right, #ea580c, #f97316);
+    box-shadow: 0 6px 15px rgb(249 115 22 / 0.3);
+    transform: translateY(-2px);
+}
+
+/* CARD 4: MENTORSHIP PROGRAM (Blue) 🟦 */
+.card-mentorship {
+    background-color: #f0f7ff;
+}
+
+.card-mentorship .section-label {
+    color: #0b69ff;
+}
+
+.card-mentorship .highlights-list svg {
+    color: #0b69ff;
+}
+
+.btn-mentorship {
+    background-image: linear-gradient(to right, #0b69ff, #0050c7);
+    color: #ffffff;
+    border-radius: 0.75rem;
+    /* 12px */
+    border: none;
+    padding: calc(0.75rem + 2px) calc(1.5rem + 2px);
+    box-shadow: 0 4px 10px rgb(11 105 255 / 0.2);
+    transform: translateY(0);
+}
+
+.btn-mentorship:hover {
+    background-image: linear-gradient(to right, #0050c7, #0b69ff);
+    box-shadow: 0 6px 15px rgb(11 105 255 / 0.3);
+    transform: translateY(-2px);
+}
+
+/* CARD 5: DONATIONS (Yellow) 🟨 */
+.card-contribute {
+    background-color: #fffceb;
+}
+
+.card-contribute .section-label {
+    color: #eab308;
+}
+
+.card-contribute .highlights-list svg {
+    color: #eab308;
+}
+
+.btn-contribute {
+    background-image: linear-gradient(to right, #eab308, #ca8a04);
+    color: #ffffff;
+    border-radius: 0.75rem;
+    /* 12px */
+    border: none;
+    padding: calc(0.75rem + 2px) calc(1.5rem + 2px);
+    box-shadow: 0 4px 10px rgb(234 179 8 / 0.2);
+    transform: translateY(0);
+}
+
+.btn-contribute:hover {
+    background-image: linear-gradient(to right, #ca8a04, #eab308);
+    box-shadow: 0 6px 15px rgb(234 179 8 / 0.3);
+    transform: translateY(-2px);
+}
+
+/* CARD 6: ALUMNI STORIES (Brown) 🫫 */
+.card-stories {
+    background-color: #fdfaf6;
+}
+
+.card-stories .section-label {
+    color: #a16207;
+}
+
+.card-stories .highlights-list svg {
+    color: #a16207;
+}
+
+.btn-stories {
+    background-image: linear-gradient(to right, #a16207, #78350f);
+    color: #ffffff;
+    border-radius: 0.75rem;
+    /* 12px */
+    border: none;
+    padding: calc(0.75rem + 2px) calc(1.5rem + 2px);
+    box-shadow: 0 4px 10px rgb(120 53 15 / 0.2);
+    transform: translateY(0);
+}
+
+.btn-stories:hover {
+    background-image: linear-gradient(to right, #78350f, #a16207);
+    box-shadow: 0 6px 15px rgb(120 53 15 / 0.3);
+    transform: translateY(-2px);
+}
+
+/* 7. Responsive Grid for 2-column row */
+.grid-container {
+    /* Mobile-first: default is column */
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container .card {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    /* 12px */
+    box-sizing: border-box;
+    /* Ensures padding is included in width */
+}
+
+.grid-container .layout-container .image-content img {
+    max-width: 100%;
+    height: 300px;
+    /* 300px */
+}
+
+.grid-container .layout-container {
+    /* UPDATED: Reduced padding */
+    padding-bottom: 0.75rem;
+    /* 1rem se kam kar diya */
+    /* Niche wale rule se column layout ho jayega */
+}
+
+
+/* 8. Responsive Layout */
+@media (min-width: 768px) {
+
+    /* 768px breakpoint */
+    .page-container {
+        padding: 1rem;
+        /* 16px */
+    }
+
+    .container {
+        padding-left: 1.5rem;
+        /* 24px */
+        padding-right: 1.5rem;
+        /* 24px */
+        /* UPDATED: Reduced vertical padding */
+        padding-top: 1rem;
+        /* 1.25rem se kam kar diya */
+        padding-bottom: 1rem;
+        /* 1.25rem se kam kar diya */
+    }
+
+    /* Default layout for full-width cards */
+    .layout-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+        /* 24px */
+        /* UPDATED: Reduced padding */
+        padding: 0.75rem;
+        /* 1rem se kam kar diya */
+    }
+
+    .text-content {
+        /* UPDATED: Made text div smaller (40%) */
+        width: 40%;
+        /* UPDATED: Reduced padding */
+        padding: 0.75rem;
+        /* 1rem se kam kar diya */
+    }
+
+    .image-content {
+        /* UPDATED: Made image div larger (60%) */
+        width: 60%;
+        /* UPDATED: Reduced padding */
+        padding: 0.75rem;
+        /* 1rem se kam kar diya */
+    }
+
+    /* Alternating layout */
+    .layout-reverse {
+        flex-direction: row-reverse;
+    }
+
+    /* --- Grid (Half-width cards) --- */
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        /* 16px */
+        margin-bottom: 0.75rem;
+        /* 12px */
+    }
+
+    .grid-container .card {
+        flex: 1;
+        /* Each card takes equal space */
+        min-width: calc(50% - 0.5rem);
+        /* 50% width minus half the gap */
+        margin-bottom: 0;
+        /* Remove bottom margin as gap handles spacing */
+    }
+
+    /* Grid ke andar wale cards ko vertical rakho */
+    .grid-container .layout-container {
+        flex-direction: column;
+        /* Text upar, image niche */
+        padding-bottom: 0.75rem;
+    }
+
+    /* Grid ke andar text ko full width do */
+    .grid-container .text-content {
+        width: 100%;
+    }
+
+    /* Grid ke andar image ko full width do */
+    .grid-container .image-content {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .page-container {
+        padding: 1.5rem;
+        /* 24px */
+    }
+
+    .section-heading {
+        font-size: 2rem;
+        /* 32px */
+    }
+}
+
+
+
+
+/* Join Section */
+
+.join-section h1 {
+    color: #F73F86;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.join-section {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #aaaaaa5d;
+    opacity: 0.95;
+    /* border: 1px solid var(--primary-color); */
+    width: 90%;
+    margin: 0px 80px 20px 80px;
+    border-radius: 15px;
+}
+
+.join-section-btn {
+    background-color: transparent;
+    color: #F73F86;
+    border: 2px solid #F73F86;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.join-section-btn:hover {
+    /* background-color: var(--primary-color); */
+    color: #000;
+    border: 2px solid #000;
+}
+
+.join-section p {
+    margin-top: 2rem;
+    color: #F73F86;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==== Footer CSS Starts Here ==== */
+.site-footer {
+    padding: 3rem 5%;
+    background-color: #213130;
+    margin-top: 70px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #9BE784;
+    margin-bottom: 1.5rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column a,
+.footer-column p {
+    color: #aaa;
+    /* text-secondary replacement */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.footer-column a:hover {
+    color: #fdfaf6;
+}
+
+/* Material Symbols icons */
+.footer-column .material-symbols-outlined {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* FontAwesome brand icons (LinkedIn etc.) */
+.footer-column .fa-brands,
+.footer-column .fab {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-bottom p {
+    color: #aaa;
+    /* text-secondary replacement */
+    font-size: 0.9rem;
+}
