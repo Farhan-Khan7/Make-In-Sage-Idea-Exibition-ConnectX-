@@ -308,7 +308,8 @@ body {
     /* background-color: #000; */
     /* 1rem se kam kar diya */
 }
-#image-directory{
+
+#image-directory {
     /* background-color: #000; */
     display: flex;
     justify-content: center;
@@ -317,13 +318,14 @@ body {
     height: 25rem;
     width: 45%;
     background-image: url(assests/Alumni\ Network.png);
-    background-size: 30rem ;
+    background-size: 30rem;
     background-position: center;
     /* background-size: cover; */
     object-fit: cover;
     background-repeat: no-repeat;
 }
-#image-events{
+
+#image-events {
     /* background-color: #000; */
     display: flex;
     justify-content: center;
@@ -332,13 +334,14 @@ body {
     height: 25rem;
     width: 45%;
     background-image: url(assests/Event.png);
-    background-size: 30rem ;
+    background-size: 30rem;
     background-position: center;
     /* background-size: cover; */
     object-fit: cover;
     background-repeat: no-repeat;
 }
-#image-jobs{
+
+#image-jobs {
     /* background-color: #000; */
     display: flex;
     justify-content: center;
@@ -347,13 +350,14 @@ body {
     height: 25rem;
     width: 75%;
     background-image: url(assests/Job\ Image.png);
-    background-size: 30rem ;
+    background-size: 30rem;
     background-position: center;
     /* background-size: cover; */
     object-fit: cover;
     background-repeat: no-repeat;
 }
-#image-mentorship{
+
+#image-mentorship {
     /* background-color: #000; */
     display: flex;
     justify-content: center;
@@ -362,13 +366,14 @@ body {
     height: 25rem;
     width: 65%;
     background-image: url(assests/mentorship.png);
-    background-size: 30rem ;
+    background-size: 30rem;
     background-position: center;
     /* background-size: cover; */
     object-fit: cover;
     background-repeat: no-repeat;
 }
-#image-contribute{
+
+#image-contribute {
     /* background-color: #000; */
     display: flex;
     justify-content: center;
@@ -377,13 +382,14 @@ body {
     height: 25rem;
     width: 55%;
     background-image: url(assests/fundrasing.png);
-    background-size: 30rem ;
+    background-size: 30rem;
     background-position: center;
     /* background-size: cover; */
     object-fit: cover;
     background-repeat: no-repeat;
 }
-#image-stories{
+
+#image-stories {
     /* background-color: #000; */
     display: flex;
     justify-content: center;
@@ -392,12 +398,13 @@ body {
     height: 25rem;
     width: 65%;
     background-image: url(assests/alumni\ stories.png);
-    background-size: 30rem ;
+    background-size: 30rem;
     background-position: center;
     /* background-size: cover; */
     object-fit: cover;
     background-repeat: no-repeat;
 }
+
 .image-content {
     /* width: 100%; */
     display: flex;
@@ -957,4 +964,617 @@ body {
     color: #aaa;
     /* text-secondary replacement */
     font-size: 0.9rem;
+}
+
+/*======================== home main code done ======================= */
+
+
+
+
+
+
+
+#signup-page {
+    display: none;
+    height: 70vh;
+    background-color: #265faf;
+}
+
+/* Main Layout */
+.container {
+    display: none;
+    /* background-color: #0e7490; */
+    /* width: 100vh; */
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#form-container {
+    width: 50vh;
+    height: 98vh;
+    /* background-color: #a4fba6; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* padding: 1rem 1rem; */
+    overflow-y: auto;
+
+}
+
+#image-container {
+    /* display: none; Hidden on mobile */
+    width: fit-content;
+    height: fit-content;
+    /* background-color: #26bd53; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 5rem 1rem; */
+    /* margin-top: 1rem; */
+}
+
+.form-wrapper {
+    width: 100%;
+    height: 82vh;
+    /* background-color: #000; */
+    max-width: 48rem;
+    margin-top: 1rem;
+    /* padding: 4rem;  */
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.tab-button {
+    padding: 0.5rem 1.25rem;
+    /* MODIFIED: Chota kiya gaya */
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: none;
+}
+
+.tab-inactive {
+    /* background-color: #a5f3fc; */
+    /* bg-custom-cyan */
+    color: #0e7490;
+    /* text-custom-cyan-dark */
+}
+
+.tab-active {
+    background-color: #F73F86;
+    /* bg-custom-pink */
+    color: white;
+    box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
+}
+
+/* Form Content */
+h1 {
+    font-size: 1.75rem;
+    /* MODIFIED: Chota kiya gaya */
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1f2937;
+    /* text-gray-900 */
+    margin-bottom: 1rem;
+    /* MODIFIED: Chota kiya gaya */
+}
+
+.form-panel {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    /* MODIFIED: Chota kiya gaya */
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+textarea {
+    width: 100%;
+    background-color: #f0fdf4;
+    /* bg-custom-input */
+    border: 1px solid #4ade80;
+    /* border-custom-green */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+    padding: 0.9rem;
+    /* MODIFIED: Chota kiya gaya */
+    font-size: 0.9rem;
+    /* MODIFIED: Chota kiya gaya */
+    font-family: 'Inter', sans-serif;
+}
+
+textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #4b5563;
+    /* Tailwind gray-600 */
+    opacity: 1;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #22c55e;
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.4);
+}
+
+/* Hide the default file input button */
+.hidden-file-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.file-upload-wrapper {
+    position: relative;
+}
+
+/* Style for the custom file input label */
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+    background-color: #f0fdf4;
+    /* bg-custom-input */
+    border: 1px solid #4ade80;
+    /* border-custom-green */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+    padding: 0.9rem;
+    /* MODIFIED: Chota kiya gaya */
+    font-size: 0.9rem;
+    /* MODIFIED: Chota kiya gaya */
+    color: #4b5563;
+    /* placeholder-gray-600 */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.custom-file-upload:hover {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+}
+
+/* Icon for upload button */
+.upload-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    fill: currentColor;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    background-color: #F73F86;
+    /* bg-custom-pink */
+    color: white;
+    padding: 0.9rem 0;
+    /* MODIFIED: Chota kiya gaya */
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    /* MODIFIED: Chota kiya gaya */
+    margin-top: 1.5rem;
+    /* MODIFIED: Chota kiya gaya */
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.submit-button:hover {
+    opacity: 0.9;
+}
+
+/* Login Link */
+.login-link {
+    text-align: center;
+    font-size: 0.9rem;
+    /* MODIFIED: Chota kiya gaya */
+    color: #374151;
+    /* gray-800 */
+    margin-top: 1.5rem;
+    /* MODIFIED: Chota kiya gaya */
+}
+
+.login-link a {
+    font-weight: 600;
+    color: #c08401;
+    /* text-custom-gold */
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Right Side Image */
+.image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 32rem;
+    padding-top: 100%;
+    /* Creates 1:1 aspect ratio */
+    position: relative;
+    background-color: #552f1c;
+    /* bg-custom-placeholder */
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+#image-container img {
+    /* position: absolute; */
+    /* transform: translate(-50% , 50%); */
+    /* top: 25%; */
+    /* left: 15%; */
+
+    width: 80%;
+    height: 80%;
+    /* background-color: #000; */
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* Responsive Media Queries */
+@media (min-width: 768px) {
+
+    /* md breakpoint */
+    .container {
+        flex-direction: row;
+        height: 100vh;
+        /* Fix height for desktop */
+    }
+
+    #form-container {
+        width: 60%;
+        padding: 2.5rem;
+        /* MODIFIED: Chota kiya gaya */
+        overflow-y: auto;
+        /* Add scrolling only to the form */
+    }
+
+    #image-container {
+        display: flex;
+        width: 40%;
+        height: 100vh;
+        /* Make image container fill height */
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-span-2 {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* lg breakpoint */
+    #form-container {
+        width: 50%;
+    }
+
+    #image-container {
+        width: 50%;
+    }
+}
+
+/*==================================signup page done========================== */
+
+
+#login-page {
+    display: none;
+}
+
+/* Main Layout */
+#l3-container {
+    display: flex;
+    /* margin-top: 20px; */
+    /* padding: 0rem 0rem 0 0; */
+    height: 50vh;
+    flex-direction: column-reverse;
+    /* Mobile-first: Form on top */
+    min-height: 100vh;
+}
+
+/* Left Side - Image Panel */
+#l3-image-container {
+    width: 100%;
+    /* background-color: #9BE784; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.l3-image-content {
+    max-width: 400px;
+}
+
+.l3-image-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.l3-image-content p {
+    font-size: 1.1rem;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.l3-image-placeholder {
+    width: 100%;
+    max-width: 32rem;
+    padding-top: 100%;
+    /* Creates 1:1 aspect ratio */
+    position: relative;
+    /* background-color: #e7e5e4; */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    animation: hero-section 1.9s ease-in-out infinite;
+}
+
+.l3-image-placeholder img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    /* background-color: #000; */
+    /* animation: bobble 2s ease-in-out infinite; */
+    
+}
+
+/* Right Side - Form Panel */
+#l3-form-container {
+    width: 100%;
+    /* background-color: #9BE784; */
+    /* background-color: #f0fdf4; */
+    /* Light green/white background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+    overflow-y: auto;
+    /* Allow form scrolling */
+}
+
+.l3-form-wrapper {
+    width: 100%;
+    max-width: 28rem;
+}
+
+.l3-form-wrapper h1 {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+    /* margin-bottom: 2.5rem; */
+}
+
+.l3-form-group {
+    margin-bottom: 1.25rem;
+}
+
+.l3-form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #000;
+}
+
+/* Form Inputs & Select */
+#l3-form-container input[type="email"],
+#l3-form-container input[type="password"],
+#l3-form-container select {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #F73F86;
+    /* Light green border */
+    border-radius: 0.5rem;
+    padding: 0.9rem;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    color: #000;
+}
+
+/* Removes default arrow on select */
+#l3-form-container select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' class='w-5 h-5'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.23 8.29a.75.75 0 0 1 .02-1.06Z' clip-rule='evenodd' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 1.25em 1.25em;
+}
+
+#l3-form-container input::placeholder {
+    color: #555;
+    /* Darker gray for placeholder */
+    opacity: 1;
+}
+
+#l3-form-container input:focus,
+#l3-form-container select:focus {
+    outline: none;
+    border-color: #F73F86;
+    /* Darker green on focus */
+    box-shadow: 0 0 0 2px rgba(155, 231, 132, 0.4);
+}
+
+.l3-form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.l3-form-options .l3-remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.l3-form-options a {
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+.l3-form-options a:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.l3-submit-button {
+    width: 100%;
+    background-color: #F73F86;
+    color: #000;
+    padding: 0.9rem 0;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.l3-submit-button:hover {
+    opacity: 0.9;
+}
+
+/* Divider */
+.l3-divider {
+    font-size: 0.8rem;
+    color: #333;
+    text-align: center;
+    margin: 1.5rem 0 1rem 0 ;
+    position: relative;
+}
+
+.l3-divider::before,
+.l3-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.l3-divider::before {
+    left: 0;
+}
+
+.l3-divider::after {
+    right: 0;
+}
+
+/* Social Logins */
+.l3-social-logins {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.l3-social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Signup Link */
+.l3-signup-link {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #000;
+}
+
+.l3-signup-link a {
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+.l3-signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Media Queries */
+@media (min-width: 768px) {
+
+    /* md breakpoint */
+    #l3-container {
+        flex-direction: row;
+        /* Image left, Form right */
+        height: 100vh;
+    }
+
+    #l3-image-container {
+        width: 50%;
+        height: 100vh;
+        padding: 4rem;
+    }
+
+    #l3-form-container {
+        width: 50%;
+        height: 100vh;
+        padding: 3rem;
+    }
 }
